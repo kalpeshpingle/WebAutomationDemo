@@ -18,6 +18,9 @@ public class BaseTest {
 	public static String fbUserId = "";
 	public static String fbPass = "";
 
+	/*
+	 * Below method to launches Web Browser
+	 */
 	@BeforeSuite(alwaysRun = true)
 	@Parameters({ "baseUrl" })
 	public void startBrowser(String url) {
@@ -34,6 +37,9 @@ public class BaseTest {
 		driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
 	}
 
+	/*
+	 * Below method Quit Web Browser
+	 */
 	@AfterSuite(alwaysRun = true)
 	public void quitBrowser() {
 		System.out.println("Close Browser");

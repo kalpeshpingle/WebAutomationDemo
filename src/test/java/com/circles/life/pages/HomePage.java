@@ -10,12 +10,15 @@ public class HomePage extends CommonMethods {
 
 	public HomePageObjects homePageObjects = new HomePageObjects();
 
+	/*
+	 * Initialize all Web Element in HomePageObjects Class
+	 */
 	public HomePage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, homePageObjects);
 	}
 
 	public void clickOnSignUpBtn() {
-		clickOnElement(homePageObjects.getSignUpBtn());
+		clickOnElement(homePageObjects.getSignUpButton());
 	}
 }

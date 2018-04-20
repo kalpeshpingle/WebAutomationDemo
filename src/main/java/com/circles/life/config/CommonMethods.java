@@ -13,22 +13,34 @@ public class CommonMethods {
 		this.driver = driver;
 	}
 
+	/*
+	 * Method to click on Web Element
+	 */
 	public void clickOnElement(WebElement elem) {
 		waitForPresent(elem, 15000);
 		elem.click();
 	}
 
+	/*
+	 * Method to wait for visibility for Web Element
+	 */
 	public void waitForPresent(WebElement elem, long timeout) {
 		WebDriverWait Wait = new WebDriverWait(driver, timeout);
 		Wait.until(ExpectedConditions.visibilityOf(elem));
 	}
 
+	/*
+	 * Method to enter Text in Web Element Field
+	 */
 	public void enterTextInField(WebElement elem,String test) {
 		waitForPresent(elem, 15000);
 		elem.clear();
 		elem.sendKeys(test);
 	}
 	
+	/*
+	 * Method to get attribute value of Web Element
+	 */
 	public String getAttributeValue(WebElement elem,String name) {
 		sleep(10000);
 		return elem.getAttribute(name);
@@ -40,7 +52,5 @@ public class CommonMethods {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-	}
-	
-	
+	}	
 }

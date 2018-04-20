@@ -5,6 +5,9 @@ import org.openqa.selenium.support.FindBy;
 
 import lombok.Data;
 
+/*
+* Using lombok library to avoid creation getter and setter
+*/
 @Data
 public class LoginPageObject {
 
@@ -15,16 +18,16 @@ public class LoginPageObject {
 	private WebElement passwordField;
 
 	@FindBy(xpath = "//*[contains(text(), 'Sign In')]")
-	private WebElement signInBtn;
+	private WebElement signInButton;
 
 	@FindBy(xpath = "//*[contains(text(), 'MY ACCOUNT')]")
 	private WebElement myAccount;
 
-	@FindBy(xpath = "//*[@id=\\\"st-container\\\"]/div/div/div[2]/div[1]/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/form/div[3]/div/input")
+	@FindBy(xpath = "//*[@id=\"st-container\"]/div/div/div[2]/div[1]/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/form/div[3]/div/input")
 	private WebElement emailIdValue;
 
 	@FindBy(xpath = "//*[contains(text(), 'Facebook')]")
-	private WebElement fbLoginBtn;
+	private WebElement fbLoginButton;
 
 	@FindBy(id = "email")
 	private WebElement fbUserIdField;
@@ -32,4 +35,6 @@ public class LoginPageObject {
 	@FindBy(id = "pass")
 	private WebElement fbPasswordField;
 
+	@FindBy(xpath = "//*[contains(text(), 'LOGOUT')]")
+	private WebElement logoutButton;
 }

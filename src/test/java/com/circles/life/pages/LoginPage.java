@@ -10,6 +10,9 @@ public class LoginPage extends CommonMethods {
 
 	public LoginPageObject loginPageObject = new LoginPageObject();
 
+	/*
+	 * Initialize all Web Element in LoginPageObject Class
+	 */
 	public LoginPage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, loginPageObject);
@@ -25,7 +28,7 @@ public class LoginPage extends CommonMethods {
 	}
 
 	public void clickOnSignInBtn() {
-		clickOnElement(loginPageObject.getSignInBtn());
+		clickOnElement(loginPageObject.getSignInButton());
 	}
 
 	public void clickOnMyAccount() {
@@ -33,20 +36,23 @@ public class LoginPage extends CommonMethods {
 	}
 
 	public String getEmailIdText() {
-		String text= getAttributeValue(loginPageObject.getEmailIdValue(), "value");
+		String text = getAttributeValue(loginPageObject.getEmailIdValue(), "value");
 		return text;
 	}
-	
+
 	public void clickOnFbLoginBtn() {
-		clickOnElement(loginPageObject.getFbLoginBtn());
+		clickOnElement(loginPageObject.getFbLoginButton());
 	}
-	
+
 	public void enterFbUserId(String id) {
 		enterTextInField(loginPageObject.getFbUserIdField(), id);
 	}
-	
+
 	public void enterFbPassword(String pass) {
 		enterTextInField(loginPageObject.getFbPasswordField(), pass);
 	}
-	
+
+	public void clickOnLogoutBtn() {
+		clickOnElement(loginPageObject.getLogoutButton());
+	}
 }
