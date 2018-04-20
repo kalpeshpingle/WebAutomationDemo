@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Sanity Suite" parallel="classes" thread-count="1">
+	<parameter name="baseUrl" value="https://pages.circles.life" />
+	<parameter name="emailId" value="kalpeshtest1@gmail.com" />
+	<parameter name="emailPassword" value="kalpesh123" />
+	<parameter name="fbUserId" value="kalpeshpingle@gmail.com" />
+	<parameter name="fbPassword" value="jaisamaratha" />
+	<test name="Web Tests">
+		<groups>
+			<run>
+				<include name="sanity" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.circles.life.test.*" />
+		</packages>
+	</test>
+
+</suite>
