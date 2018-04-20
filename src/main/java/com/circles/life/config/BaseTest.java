@@ -12,28 +12,28 @@ import org.testng.annotations.Parameters;
 
 public class BaseTest {
 	public static WebDriver driver;
-	protected static String baseUrl = "";
-	protected static String userEmailId = "";
-	protected static String userEmailPass = "";
-	protected static String fbUserId = "";
-	protected static String fbPass = "";
+	public static String baseUrl = "";
+	public static String userEmailId = "";
+	public static String userEmailPass = "";
+	public static String fbUserId = "";
+	public static String fbPass = "";
 
 	@BeforeSuite(alwaysRun = true)
 	@Parameters({ "baseUrl" })
 	public void startBrowser(String url) {
 		baseUrl = url;
-		System.setProperty("webdriver.chrome.driver","drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 		System.out.println("Set desired capabilities");
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
 		ChromeOptions options = new ChromeOptions();
 		cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-		cap.setCapability(ChromeOptions.CAPABILITY, options);		
+		cap.setCapability(ChromeOptions.CAPABILITY, options);
 		System.out.println("Launch Browser");
 		driver = new ChromeDriver(cap);
 		driver.get(baseUrl);
-		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
 	}
-	
+
 	@AfterSuite(alwaysRun = true)
 	public void quitBrowser() {
 		System.out.println("Close Browser");

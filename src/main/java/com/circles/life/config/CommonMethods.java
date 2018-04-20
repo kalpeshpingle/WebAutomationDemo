@@ -14,7 +14,7 @@ public class CommonMethods {
 	}
 
 	public void clickOnElement(WebElement elem) {
-		waitForPresent(elem, 10000);
+		waitForPresent(elem, 15000);
 		elem.click();
 	}
 
@@ -24,13 +24,13 @@ public class CommonMethods {
 	}
 
 	public void enterTextInField(WebElement elem,String test) {
-		waitForPresent(elem, 10000);
+		waitForPresent(elem, 15000);
 		elem.clear();
 		elem.sendKeys(test);
 	}
 	
 	public String getAttributeValue(WebElement elem,String name) {
-		waitForPresent(elem, 10000);
+		sleep(10000);
 		return elem.getAttribute(name);
 	}
 	
