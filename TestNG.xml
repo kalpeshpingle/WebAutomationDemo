@@ -2,9 +2,9 @@
 <suite name="Sanity Suite" parallel="classes" thread-count="1">
 	<parameter name="baseUrl" value="https://pages.circles.life" />
 	<parameter name="emailId" value="kalpeshtest1@gmail.com" />
-	<parameter name="emailPassword" value="kalpesh123" />
+	<parameter name="emailPassword" value="test" />
 	<parameter name="fbUserId" value="kalpeshpingle@gmail.com" />
-	<parameter name="fbPassword" value="jaisamaratha" />
+	<parameter name="fbPassword" value="test" />
 	<test name="Web Tests">
 		<groups>
 			<run>
