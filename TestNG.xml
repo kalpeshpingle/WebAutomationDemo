@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Sanity Suite" parallel="classes" thread-count="1">
-	<parameter name="baseUrl" value="https://pages.circles.life" />
+	<parameter name="baseUrl" value="https://www.google.com" />
 	<parameter name="emailId" value="kalpeshtest1@gmail.com" />
 	<parameter name="emailPassword" value="test" />
 	<parameter name="fbUserId" value="kalpeshpingle@gmail.com" />
